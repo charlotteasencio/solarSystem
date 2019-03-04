@@ -113,14 +113,14 @@ function init() {
     const allX = canvas.width / 2
     const allY = canvas.height / 2
 
-    const planet1dist = 70
-    const planet2dist = 100
-    const planet3dist = 150
-    const planet4dist = 195
-    const planet5dist = 260
-    const planet6dist = 320
-    const planet7dist = 380
-    const planet8dist = 450
+    const planet1dist = canvas.height / 15
+    const planet2dist = canvas.height / 10
+    const planet3dist = canvas.height / 8
+    const planet4dist = canvas.height / 6
+    const planet5dist = canvas.height / 4.5
+    const planet6dist = canvas.height / 3.2
+    const planet7dist = canvas.height / 2.5
+    const planet8dist = canvas.height / 2.2
 
     sun = new Sun(allX, allY, 35, "yellow")
 
