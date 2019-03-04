@@ -12,7 +12,7 @@ addEventListener('resize', () => {
 })
 
 // Objects
-function Planet(x, y, radius, color, velocity, distanceCenter){
+function Planet(x, y, radius, color,  velocity, distanceCenter){
     this.x = x
     this.y = y
     this.radius = radius
@@ -88,6 +88,28 @@ function Orbit(x, y, radius, color){
     }
 }
 
+// const backgroundGradient = c.createLinearGradient(0, 0, 0, canvas.height)
+// backgroundGradient.addColorStop(0, '#143872')
+// backgroundGradient.addColorStop(1, '#54546d')
+
+// let grd;
+
+// grd = c.createRadialGradient(canvas.width / 2, canvas.height / 2, 0.000, canvas.width / 2, canvas.height / 2, canvas.height / 2)
+
+// grd.addColorStop(0.000, 'rgba(255, 238, 40, 1.000)');
+//       grd.addColorStop(0.200, 'rgba(255, 238, 40, 1.000)');
+//       grd.addColorStop(0.210, 'rgba(194, 66, 57, 1.000)');
+//       grd.addColorStop(0.400, 'rgba(194, 66, 57, 1.000)');
+//       grd.addColorStop(0.410, 'rgba(130, 194, 238, 1.000)');
+//       grd.addColorStop(0.600, 'rgba(130, 194, 238, 1.000)');
+//       grd.addColorStop(0.610, 'rgba(254, 254, 254, 1.000)');
+//       grd.addColorStop(0.780, 'rgba(254, 254, 254, 1.000)');
+//       grd.addColorStop(0.790, 'rgba(52, 50, 51, 1.000)');
+//       grd.addColorStop(0.990, 'rgba(52, 50, 51, 1.000)');
+//       grd.addColorStop(1.000, 'rgba(255, 255, 255, 1.000)');
+
+
+
 // Implementation
 let sun;
 
@@ -124,14 +146,14 @@ function init() {
 
     sun = new Sun(allX, allY, 35, "yellow")
 
-    planet1 = new Planet(allX, allY, 7, "brown", 0.001607 * 8, planet1dist)
-    planet2 = new Planet(allX, allY, 10, "orange", 0.001174 * 8, planet2dist)
-    planet3 = new Planet(allX, allY, 15, "blue", 0.001 * 8, planet3dist)
-    planet4 = new Planet(allX, allY, 12, "red", 0.000802 * 8, planet4dist)
-    planet5 = new Planet(allX, allY, 24, "tan", 0.000434 * 8, planet5dist)
-    planet6 = new Planet(allX, allY, 30, "green", 0.000323 * 8, planet6dist)
-    planet7 = new Planet(allX, allY, 20, "lightblue", 0.000228 * 8, planet7dist)
-    planet8 = new Planet(allX, allY, 22, "purple", 0.000182 * 8, planet8dist)
+    planet1 = new Planet(allX, allY, 7, "brown", 0.01607, planet1dist)
+    planet2 = new Planet(allX, allY, 10, "orange", 0.01174, planet2dist)
+    planet3 = new Planet(allX, allY, 15, "blue", 0.01, planet3dist)
+    planet4 = new Planet(allX, allY, 12, "red", 0.00802, planet4dist)
+    planet5 = new Planet(allX, allY, 24, "tan", 0.00434, planet5dist)
+    planet6 = new Planet(allX, allY, 30, "green", 0.00323, planet6dist)
+    planet7 = new Planet(allX, allY, 20, "lightblue", 0.00228, planet7dist)
+    planet8 = new Planet(allX, allY, 22, "purple", 0.00182, planet8dist)
 
     orbit1 = new Orbit(allX, allY, planet1dist, "black")
     orbit2 = new Orbit(allX, allY, planet2dist, "black")
@@ -146,6 +168,11 @@ function init() {
 // Animation Loop
 function animate() {
     requestAnimationFrame(animate)
+
+    // c.fillStyle = backgroundGradient
+    // c.fillRect(0, 0, canvas.width, canvas.height)
+
+
     c.clearRect(0, 0, canvas.width, canvas.height)
 
     sun.update();
@@ -167,6 +194,9 @@ function animate() {
     planet6.update();
     planet7.update();
     planet8.update();
+
+    // c.fillStyle = grd;
+    // c.fillRect(0, 0, canvas.width, canvas.height)
 }
 
 init()
