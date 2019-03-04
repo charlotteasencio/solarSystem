@@ -124,14 +124,14 @@ function init() {
 
     sun = new Sun(allX, allY, 35, "yellow")
 
-    planet1 = new Planet(allX, allY, 7, "brown", 0.03, planet1dist)
-    planet2 = new Planet(allX, allY, 10, "orange", 0.02, planet2dist)
-    planet3 = new Planet(allX, allY, 15, "blue", 0.0095, planet3dist)
-    planet4 = new Planet(allX, allY, 12, "red", 0.008, planet4dist)
-    planet5 = new Planet(allX, allY, 24, "tan", 0.0065, planet5dist)
-    planet6 = new Planet(allX, allY, 30, "green", 0.0043, planet6dist)
-    planet7 = new Planet(allX, allY, 20, "lightblue", 0.004, planet7dist)
-    planet8 = new Planet(allX, allY, 22, "purple", 0.002, planet8dist)
+    planet1 = new Planet(allX, allY, 7, "brown", 0.001607 * 8, planet1dist)
+    planet2 = new Planet(allX, allY, 10, "orange", 0.001174 * 8, planet2dist)
+    planet3 = new Planet(allX, allY, 15, "blue", 0.001 * 8, planet3dist)
+    planet4 = new Planet(allX, allY, 12, "red", 0.000802 * 8, planet4dist)
+    planet5 = new Planet(allX, allY, 24, "tan", 0.000434 * 8, planet5dist)
+    planet6 = new Planet(allX, allY, 30, "green", 0.000323 * 8, planet6dist)
+    planet7 = new Planet(allX, allY, 20, "lightblue", 0.000228 * 8, planet7dist)
+    planet8 = new Planet(allX, allY, 22, "purple", 0.000182 * 8, planet8dist)
 
     orbit1 = new Orbit(allX, allY, planet1dist, "black")
     orbit2 = new Orbit(allX, allY, planet2dist, "black")
