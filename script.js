@@ -68,8 +68,29 @@ function Sun(x, y, radius, color){
     }
 }
 
+function Orbit(x, y, radius, color){
+    this.x = x
+    this.y = y
+    this.radius = radius
+    this.color = color
+
+    this.update = function() {
+
+        this.draw()
+    }
+
+    this.draw = function() {
+         c.beginPath()
+         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false)
+         //c.fillStyle = this.color
+         c.stroke()
+
+    }
+}
+
 // Implementation
 let sun;
+
 let planet1;
 let planet2;
 let planet3;
@@ -77,14 +98,32 @@ let planet4;
 let planet5;
 let planet6;
 
+let orbit1;
+let orbit2;
+let orbit3;
+let orbit4;
+let orbit5;
+let orbit6;
+
 function init() {
-    sun = new Sun(canvas.width / 2, canvas.height / 2, 35, "yellow")
-    planet1 = new Planet(canvas.width / 2, canvas.height / 2, 10, "brown", 70)
-    planet2 = new Planet(canvas.width / 2, canvas.height / 2, 15, "orange", 100)
-    planet3 = new Planet(canvas.width / 2, canvas.height / 2, 15, "blue", 150)
-    planet4 = new Planet(canvas.width / 2, canvas.height / 2, 20, "pink", 195)
-    planet5 = new Planet(canvas.width / 2, canvas.height / 2, 24, "gray", 260)
-    planet6 = new Planet(canvas.width / 2, canvas.height / 2, 30, "green", 360)
+    const allX = canvas.width / 2
+    const allY = canvas.height / 2
+
+    sun = new Sun(allX, allY, 35, "yellow")
+
+    planet1 = new Planet(allX, allY, 10, "brown", 70)
+    planet2 = new Planet(allX, allY, 15, "orange", 100)
+    planet3 = new Planet(allX, allY, 15, "blue", 150)
+    planet4 = new Planet(allX, allY, 20, "pink", 195)
+    planet5 = new Planet(allX, allY, 24, "gray", 260)
+    planet6 = new Planet(allX, allY, 30, "green", 360)
+
+    orbit1 = new Orbit(allX, allY, 70, "black")
+    orbit2 = new Orbit(allX, allY, 100, "black")
+    orbit3 = new Orbit(allX, allY, 150, "black")
+    orbit4 = new Orbit(allX, allY, 195, "black")
+    orbit5 = new Orbit(allX, allY, 260, "black")
+    orbit6 = new Orbit(allX, allY, 360, "black")
 }
 
 // Animation Loop
@@ -93,6 +132,13 @@ function animate() {
     c.clearRect(0, 0, canvas.width, canvas.height)
 
     sun.update();
+
+    orbit1.update();
+    orbit2.update();
+    orbit3.update();
+    orbit4.update();
+    orbit5.update();
+    orbit6.update();
 
     planet1.update();
     planet2.update();
