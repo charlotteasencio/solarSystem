@@ -12,13 +12,13 @@ addEventListener('resize', () => {
 })
 
 // Objects
-function Planet(x, y, radius, color, distanceCenter){
+function Planet(x, y, radius, color, velocity, distanceCenter){
     this.x = x
     this.y = y
     this.radius = radius
     this.color = color
-    this.radians = 0 //Math.random() * Math.PI *2 - to give them a radom starting point along the cirle, using a number between -1 and 1 will give them all the same point
-    this.velocity = Math.random() * 0.03
+    this.radians = Math.random() * Math.PI *2 //to give them a radom starting point along the cirle, using a number between -1 and 1 will give them all the same point
+    this.velocity = velocity
     this.distanceCenter = distanceCenter
 
 
@@ -119,19 +119,19 @@ function init() {
     const planet4dist = 195
     const planet5dist = 260
     const planet6dist = 320
-    const planet7dist = 360
+    const planet7dist = 380
     const planet8dist = 450
 
     sun = new Sun(allX, allY, 35, "yellow")
 
-    planet1 = new Planet(allX, allY, 7, "brown", planet1dist)
-    planet2 = new Planet(allX, allY, 10, "orange", planet2dist)
-    planet3 = new Planet(allX, allY, 15, "blue", planet3dist)
-    planet4 = new Planet(allX, allY, 12, "pink", planet4dist)
-    planet5 = new Planet(allX, allY, 24, "tan", planet5dist)
-    planet6 = new Planet(allX, allY, 30, "green", planet6dist)
-    planet7 = new Planet(allX, allY, 18, "lightblue", planet7dist)
-    planet8 = new Planet(allX, allY, 22, "purple", planet8dist)
+    planet1 = new Planet(allX, allY, 7, "brown", 0.04, planet1dist)
+    planet2 = new Planet(allX, allY, 10, "orange", 0.02, planet2dist)
+    planet3 = new Planet(allX, allY, 15, "blue", 0.009, planet3dist)
+    planet4 = new Planet(allX, allY, 12, "red", 0.008, planet4dist)
+    planet5 = new Planet(allX, allY, 24, "tan", 0.006, planet5dist)
+    planet6 = new Planet(allX, allY, 30, "green", 0.004, planet6dist)
+    planet7 = new Planet(allX, allY, 18, "lightblue", 0.004, planet7dist)
+    planet8 = new Planet(allX, allY, 22, "purple", 0.003, planet8dist)
 
     orbit1 = new Orbit(allX, allY, planet1dist, "black")
     orbit2 = new Orbit(allX, allY, planet2dist, "black")
