@@ -114,20 +114,20 @@ function init() {
     const allY = canvas.height / 2
 
     const planet1dist = canvas.height / 15
-    const planet2dist = canvas.height / 10
-    const planet3dist = canvas.height / 8
-    const planet4dist = canvas.height / 6
-    const planet5dist = canvas.height / 4.5
+    const planet2dist = canvas.height / 11
+    const planet3dist = canvas.height / 7.6
+    const planet4dist = canvas.height / 5.8
+    const planet5dist = canvas.height / 4.4
     const planet6dist = canvas.height / 3.2
     const planet7dist = canvas.height / 2.5
     const planet8dist = canvas.height / 2.2
 
     sun = new Sun(allX, allY, 35, "yellow")
 
-    planet1 = new Planet(allX, allY, 7, "brown", 0.04, planet1dist)
-    planet2 = new Planet(allX, allY, 10, "orange", 0.03, planet2dist)
-    planet3 = new Planet(allX, allY, 15, "blue", 0.019, planet3dist)
-    planet4 = new Planet(allX, allY, 12, "red", 0.009, planet4dist)
+    planet1 = new Planet(allX, allY, 7, "brown", 0.03, planet1dist)
+    planet2 = new Planet(allX, allY, 10, "orange", 0.02, planet2dist)
+    planet3 = new Planet(allX, allY, 15, "blue", 0.0095, planet3dist)
+    planet4 = new Planet(allX, allY, 12, "red", 0.008, planet4dist)
     planet5 = new Planet(allX, allY, 24, "tan", 0.0065, planet5dist)
     planet6 = new Planet(allX, allY, 30, "green", 0.0043, planet6dist)
     planet7 = new Planet(allX, allY, 20, "lightblue", 0.004, planet7dist)
